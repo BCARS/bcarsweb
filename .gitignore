@@ -1,0 +1,12 @@
+.idea/
+*.pyc
+*.pyo
+*.db
+.DS_Store
+.coverage
+local_settings.py
+static/media/uploads
+env/
+logs/
+static/
+media/uploads/
