@@ -7,7 +7,6 @@ from django.conf import settings
 
 from mezzanine.core.views import direct_to_template
 
-
 admin.autodiscover()
 
 # Add the urlpatterns for any custom Django applications here.
@@ -34,7 +33,7 @@ urlpatterns += patterns('',
 
 
     # make logbook to match old site(s)
-    url("^$", "mezzanine.blog.views.blog_post_list", name="home"),
+    # url("^$", "mezzanine.blog.views.blog_post_list", name="home"),
     url("^logbook$", "mezzanine.blog.views.blog_post_list", name="home"),
     url("^%s/" % settings.EVENT_SLUG, include("mezzanine_agenda.urls")),
 
@@ -52,6 +51,10 @@ urlpatterns += patterns('',
     # should be used if you want to customize the homepage's template.
 
     # url("^$", "mezzanine.pages.views.page", {"slug": "/"}, name="home"),
+
+    # This one uses the welcome page in the database.
+    url("^$", "mezzanine.pages.views.page", {"slug": "/"}, name="home"),
+    # url("^$", direct_to_template, {"template": "static.html"}, name="home"),
 
     # HOMEPAGE FOR A BLOG-ONLY SITE
     # -----------------------------
@@ -101,3 +104,5 @@ urlpatterns += patterns('',
 # pages can use JS, CSS and images.
 handler404 = "mezzanine.core.views.page_not_found"
 handler500 = "mezzanine.core.views.server_error"
+
+

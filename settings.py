@@ -210,8 +210,8 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-# MEDIA_URL = STATIC_URL + "media/"
-MEDIA_URL = "/media/"
+MEDIA_URL = STATIC_URL + "media/"
+# MEDIA_URL = "/media"
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
@@ -232,14 +232,6 @@ TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
 ################
 
 INSTALLED_APPS = (
-    "django.contrib.admin",
-    "django.contrib.auth",
-    "django.contrib.contenttypes",
-    "django.contrib.redirects",
-    "django.contrib.sessions",
-    "django.contrib.sites",
-    "django.contrib.sitemaps",
-    "django.contrib.staticfiles",
     "mezzanine.boot",
     "mezzanine.conf",
     "mezzanine.core",
@@ -248,12 +240,18 @@ INSTALLED_APPS = (
     "mezzanine.forms",
     "mezzanine.pages",
     "mezzanine.galleries",
-    "mezzanine.twitter",
     "mezzanine_agenda",
-    # "mezzanine_blocks",
-    #"mezzanine.accounts",
-    #"mezzanine.mobile",
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.messages",
+    "django.contrib.redirects",
+    "django.contrib.sessions",
+    "django.contrib.sites",
+    "django.contrib.sitemaps",
+    "django.contrib.staticfiles",
 )
+
 
 # List of processors used by RequestContext to populate the context.
 # Each one should be a callable that takes the request object as its

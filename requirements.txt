@@ -1,5 +1,4 @@
-Mezzanine>=3.1.10
--e git+https://github.com/jpells/mezzanine-agenda.git#egg=mezzanine-agenda
--e git+https://github.com/renyi/mezzanine-blocks.git#egg=mezzanine-blocks
+Mezzanine==4.0.1
+-e git+https://github.com/bcars/mezzanine-agenda.git#egg=mezzanine-agenda
 mezzanine-grappelli
 mezzanine-file-collections

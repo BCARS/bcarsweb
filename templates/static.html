@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block meta_title %}{% trans "Home" %}{% endblock %}
+{% block title %}{% trans "Home" %}{% endblock %}
+
+{% block breadcrumb_menu %}
+    <li class="active">{% trans "Home" %}</li>
+{% endblock %}
+
+{% block main %}
+    {% blocktrans %}
+
+
+        <div class="starter-template"><!-- welcome panel -->
+
+
+            <!-- two column row -->
+            <div class="row"><!-- getting started column -->
+                <div class="col-md-6">
+
+
+                    <h2><span class="label label-success">Get NOT IT Started</span></h2>
+
+                            <ul>
+                                <li><a href="/how-to-be-a-ham/">Get Licensed</a></li>
+                                <li><a href="/what-is-amateur-radio/">About Amateur Radio</a></li>
+                                <li><a href="/about/qwewqeqew/about/history/">About BCARS</a></li>
+                            </ul>
+                    <h2><span class="label label-danger">Get Involved</span></h2>
+                      <ul>
+                        <li>Community support</li>
+                        <li>Get your photo ID badge.</li>
+                        <li>Get FEMA certified</li>
+                        <li><a href="/about/mailing-list">Join the Mailing List</a></li>
+                        <li><a href="/contact/">Contact Us</a></li>
+
+
+                      </ul>
+                </div>
+                <div class="col-md-6">
+
+                      <h2><span class="label label-warning">Learn More</span></h2>
+                             <ul>
+                                <li>Get on the air!</li>
+                                <li><a href="/amateur-radio-communication-techniques/">Radio communications
+                                    explained.</a>
+                                </li>
+                                <li><a href="/aprs-explained/">Using APRS</a></li>
+                                <li>Using NBEMS/Fldigi/data modes.</li>
+                               <li><a href="/frequency-list">VHF/UHF Frequency List</a></li>
+                            </ul>
+
+                      <h2><span class="label label-info">Club Information</span></h2>
+                        <ul>
+                            <li><a href="/meetings">Meeting Times</a></li>
+                            <li><a href="/about/mailing-list">Join the Mailing List</a></li>
+                            <li><a href="/about/repeaters-and-nets">Repeaters and Nets</a></li>
+                            <li><a href="/shorts/">SHORTS Newsletter</a></li>
+                            <li><a href="/about/contact/legals/constitution/">Club Constitution</a></li>
+                            <li><a href="/about/contact/legals/bylaws/">Club Bylaws</a></li>
+                            <li><a href="/about/history">Club History</a></li>
+
+
+                        </ul>
+                </div>
+
+            </div>
+        </div>
+
+    {% endblocktrans %}
+{% endblock %}

@@ -1,0 +1,4 @@
+-r requirements.txt
+## If you are using mysql (say like in prod)
+## apt-get install python-dev libmysqlclient-dev
+MySQL-python
